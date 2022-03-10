@@ -1,7 +1,7 @@
 var elList = document.querySelector("#movie_list");
 var elSearchNum = document.querySelector("#search-result-number");
 
-var newMoviesList = movies.slice(139, 150);
+var newMoviesList = movies.slice(29, 50);
 elSearchNum.textContent = newMoviesList.length;
 
 function renderMovies(array, place) {
