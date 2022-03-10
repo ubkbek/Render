@@ -11,7 +11,7 @@ function renderMovies(array, place) {
 
         // Creating <li> element
         var newLi = document.createElement("LI");
-        newLi.classList.add("col-6", "mb-4");
+        newLi.classList.add("col-5", "mb-4");
 
         // creating <div> element
         var newDiv = document.createElement("DIV");
