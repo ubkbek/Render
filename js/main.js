@@ -1,7 +1,7 @@
 var elList = document.querySelector("#movie_list");
 var elSearchNum = document.querySelector("#search-result-number");
 
-var newMoviesList = movies.slice(139, 149);
+var newMoviesList = movies.slice(139, 150);
 elSearchNum.textContent = newMoviesList.length;
 
 function renderMovies(array, place) {
@@ -11,7 +11,7 @@ function renderMovies(array, place) {
 
         // Creating <li> element
         var newLi = document.createElement("LI");
-        newLi.classList.add("col-5", "mb-4");
+        newLi.classList.add("width-45", "mb-4");
 
         // creating <div> element
         var newDiv = document.createElement("DIV");
