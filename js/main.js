@@ -1,7 +1,7 @@
 var elList = document.querySelector("#movie_list");
 var elSearchNum = document.querySelector("#search-result-number");
 
-var newMoviesList = movies.slice(100, 130);
+var newMoviesList = movies.slice(139, 149);
 elSearchNum.textContent = newMoviesList.length;
 
 function renderMovies(array, place) {
@@ -63,17 +63,17 @@ function renderMovies(array, place) {
         newSmallDiv.setAttribute("class", "d-flex, justify-content-center, gap-2");
 
 
-        var newButton1 = document.createElement("button");
-        newButton1.setAttribute("class", "btn btn-outline-primary border-2")
+        var newButton1 = document.createElement("a");
+        newButton1.setAttribute("class", "btn btn-outline-primary border-2 py-1 px-0 fs-6 ms-2")
         newButton1.textContent = "Watch trailer";
-
-
+        newButton1.setAttribute("href", `https://www.youtube.com/watch?v=${item.ytid}`);
+        newButton1.setAttribute("target", "_blank");
         var newButton2 = document.createElement("button");
-        newButton2.setAttribute("class", "btn btn-outline-success border-2");
+        newButton2.setAttribute("class", "btn btn-outline-success border-2 py-1 px-0 fs-6 ms-2");
         newButton2.textContent = "More info";
 
         var newButton3 = document.createElement("button");
-        newButton3.setAttribute("class", "btn btn-outline-info border-2");
+        newButton3.setAttribute("class", "btn btn-outline-info border-2 py-1 px-0 fs-6 ms-2");
         newButton3.textContent = "Bookmark";
 
         place.appendChild(newLi)
