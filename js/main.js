@@ -1,7 +1,8 @@
 var elList = document.querySelector("#movie_list");
+// elList.setAttribute.classList("class", "w-100")
 var elSearchNum = document.querySelector("#search-result-number");
 
-var newMoviesList = movies.slice(29, 50);
+var newMoviesList = movies.slice(29, 47);
 elSearchNum.textContent = newMoviesList.length;
 
 function renderMovies(array, place) {
@@ -11,7 +12,7 @@ function renderMovies(array, place) {
 
         // Creating <li> element
         var newLi = document.createElement("LI");
-        newLi.classList.add("width-45", "mb-4");
+        newLi.classList.add("width-45", "mb-4", "p-0");
 
         // creating <div> element
         var newDiv = document.createElement("DIV");
@@ -20,7 +21,6 @@ function renderMovies(array, place) {
         // creating <img> element
         var newImg = document.createElement("img")
         newImg.setAttribute("src", `https://img.youtube.com/vi/${item.ytid}/mqdefault.jpg`)
-        // newImg.setAttribute("src", `https://img.youtube.com/vi/${item.ytid}/mqdefault.jpg`)
         newImg.setAttribute("class","card-img-top");
         newImg.setAttribute("alt","Card image");
 
@@ -64,16 +64,16 @@ function renderMovies(array, place) {
 
 
         var newButton1 = document.createElement("a");
-        newButton1.setAttribute("class", "btn btn-outline-primary border-2 py-1 px-0 fs-6 ms-2")
+        newButton1.setAttribute("class", "btn btn-outline-primary border-2 py-1 px-3 fs-6 ms-1")
         newButton1.textContent = "Watch trailer";
         newButton1.setAttribute("href", `https://www.youtube.com/watch?v=${item.ytid}`);
         newButton1.setAttribute("target", "_blank");
         var newButton2 = document.createElement("button");
-        newButton2.setAttribute("class", "btn btn-outline-success border-2 py-1 px-0 fs-6 ms-2");
+        newButton2.setAttribute("class", "btn btn-outline-success border-2 py-1 px-3 fs-6 ms-1");
         newButton2.textContent = "More info";
 
         var newButton3 = document.createElement("button");
-        newButton3.setAttribute("class", "btn btn-outline-info border-2 py-1 px-0 fs-6 ms-2");
+        newButton3.setAttribute("class", "btn btn-outline-info border-2 py-1 px-3 fs-6 ms-1");
         newButton3.textContent = "Bookmark";
 
         place.appendChild(newLi)
